@@ -1,6 +1,8 @@
 /* Copyright (C) 2020 afnanplk.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
+re edited by Shahid ser
+LUTTAPI V2
 */
 
 
@@ -25,14 +27,14 @@ MyPnky.addCommand({pattern: 'clear', fromMe: true, desc: END, dontAddCommandList
 
     await message.sendMessage('```cleaning chat...```');
     await message.client.modifyChat (message.jid, ChatModification.delete);
-    await message.sendMessage('```🏳 Chat cleared 🏳```');
+    await message.sendMessage('```🏳 ᴄʜᴀᴛ ᴄʟᴇᴀʀᴇᴅ 🏳```');
 }));
 
 
-MyPnky.addCommand({pattern: 'clean ?(.*)', fromMe: true, desc: END, dontAddCommandList: true}, (async (message, match) => {
+MyPnky.addCommand({pattern: 'clear ?(.*)', fromMe: true, desc: END, dontAddCommandList: true}, (async (message, match) => {
     if (match[1] === '') return await message.client.sendMessage(message.jid,'```enter jid address```',MessageType.text);
     await message.sendMessage('Chat clearing...');   
     await message.client.modifyChat (match[1] == '' ? message.jid : match [1], ChatModification.delete);
-    await message.sendMessage('🚮 Chat cleared');
+    await message.sendMessage('🚮 ᴄʜᴀᴛ ᴄʟᴇᴀʀᴇᴅ');
 }));
 }
