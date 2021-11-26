@@ -10,7 +10,7 @@ const events = require("./events");
 const chalk = require('chalk');
 const config = require('./config');
 const {WAConnection, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
-const {Message, StringSession, Image, Video} = require('./PinkyMwol/');
+const {Message, StringSession, Image, Video} = require('./luttapi_v2/');
 const { DataTypes } = require('sequelize');
 const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
 const got = require('got');
@@ -82,7 +82,7 @@ async function whatsAsena () {
 
     conn.on ('credentials-updated', async () => {
         console.log(
-            chalk.blueBright.italic('✅ Login information updated!')
+            chalk.blueBright.italic('✅ ʟᴏɢɪɴ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴜᴘᴅᴀᴛᴇᴅ!')
         );
 
         const authInfo = conn.base64EncodedAuthInfo();
@@ -102,11 +102,11 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
 
     conn.on('open', async () => {
         console.log(
-            chalk.green.bold('✅ Login successful!')
+            chalk.green.bold('✅ ʟᴏɢɪɴ Sᴜᴄᴄᴇssғᴜʟʟ!')
         );
 
         console.log(
-            chalk.blueBright.italic('⬇️ Installing external plugins...')
+            chalk.blueBright.italic('⬇️ ɪɴsᴛᴀʟʟɪɴɢ ᴇxᴛᴇʀɴᴀʟ ᴘʟᴜɢɪɴs...')
         );
 
         var plugins = await plugindb.PluginDB.findAll();
@@ -122,7 +122,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
         });
 
         console.log(
-            chalk.blueBright.italic('⬇️  Installing plugins...')
+            chalk.blueBright.italic('⬇️  ɪɴsᴛᴀʟʟɪɴɢ ᴘʟᴜɢɪɴs...')
         );
 
         fs.readdirSync('./plugins').forEach(plugin => {
@@ -132,8 +132,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
         });
 
         console.log(
-            chalk.green.bold('𝚙𝚒𝚗𝚔𝚢 𝚠𝚘𝚛𝚔𝚒𝚗𝚐 ' + config.WORKTYPE + ' 𝚗𝚘𝚠 👻'));
-            await conn.sendMessage(conn.user.jid, "ᴘɪɴᴋʏ ɪꜱ ᴀʟʟ ꜱᴇᴛ", MessageType.text);
+            chalk.green.bold('ʟᴜᴛᴛᴀᴘɪ ᴡᴏʀᴋɪɴɢ ' + config.WORKTYPE + ' ɴᴏᴡ 🤫'));
+            await conn.sendMessage(conn.user.jid, "ʟᴜᴛᴛᴀᴘɪ ɪꜱ ᴀʟʟ ꜱᴇᴛ", MessageType.text);
             await conn.sendMessage(conn.user.jid, "``` WORKING " + config.WORKTYPE + "```" , MessageType.text);
     });
     
@@ -275,8 +275,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                                     'Gerçekleşen Hata: ' + error + '\n\n'
                                     , MessageType.text);
                             } else {
-                                await conn.sendMessage(conn.user.jid, '__PINKYBOT_☠☠_[error] ' +
-                                    '\n\n*👻 ' + error + '*\n'
+                                await conn.sendMessage(conn.user.jid, '__ʟᴜᴛᴛᴀᴘɪ-ʙᴏᴛ_😔😔_[error] ' +
+                                    '\n\n*😷 ' + error + '*\n'
                                     , MessageType.text);
                             }
                         }
