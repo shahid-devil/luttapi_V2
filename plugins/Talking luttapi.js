@@ -2,7 +2,8 @@
 eva artificial intelligence was codded by Phaticusthiccy
 also 90% of thise code is done by Phaticusthiccy
 
-re-coded or modified by afnanplk
+re-coded by Shahid ser
+Credit by afnan plk
 to bring new ai
 */
 
