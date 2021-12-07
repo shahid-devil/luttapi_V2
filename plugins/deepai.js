@@ -1,5 +1,6 @@
 /* Codded by @phaticusthiccy
-re edited by afnanplk
+re edited by shahid-devll
+credit by  afnanplk
 */
 
 const MyPnky = require('../events');
